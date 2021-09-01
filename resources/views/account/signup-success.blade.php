@@ -9,7 +9,7 @@
 <body>
     <h1>signup success</h1>
     姓名：{{ $name }}<br/>
-    帳號：{{ $account }}<br/>
+    帳號：{{ $email }}<br/>
 
 </body>
 </html>

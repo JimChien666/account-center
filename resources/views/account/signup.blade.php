@@ -11,7 +11,7 @@
     <form action="signup" method="POST">
         @csrf
         姓名:<input type="text" name='name'/><br/>
-        帳號：<input type="text" name='account'/><br/>
+        email：<input type="text" name='email'/><br/>
         密碼：<input type="password" name='password'/><br/>
         密碼確認：<input type="password" name='passwordCheck'/><br/>
         <button type="submit">註冊</button>
