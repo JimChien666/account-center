@@ -8,8 +8,6 @@
 </head>
 <body>
     @include('account.nav')
-    <h1>signup success</h1>
-    姓名：{{ $name }}<br/>
-    帳號：{{ $email }}<br/>
+    <h1>login success</h1>
 </body>
 </html>

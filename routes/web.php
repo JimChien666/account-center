@@ -27,7 +27,11 @@ Route::get('/signup', function () {
     return view('account.signup');
 });
 
+Route::post('/login', [UserController::class, 'login']);
+
 Route::post('/signup', [UserController::class, 'signup']);
+
+Route::get('/logout', [UserController::class, 'logout']);
 
 Route::resources([
     'photos'=> PhotoController::class,
