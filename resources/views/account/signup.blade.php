@@ -9,12 +9,9 @@
 <body>
     @include('account.nav')
     <h1>signup page</h1>
-    @isset($error)
-        <span style="color:red;">{{ $error }}</span>
-    @endisset
 
     @if ($errors->has('fail'))
-        <div class="fail">{{ $errors->first('fail') }}</div>
+        <div style="color:red;">{{ $errors->first('fail') }}</div>
     @endif
     {{ Form::open(['url'=>'signup', 'method'=>'post']) }}
         {{ Form::label('name', '姓名') }}

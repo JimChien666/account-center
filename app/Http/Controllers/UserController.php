@@ -17,7 +17,8 @@ class UserController extends Controller{
         $email = $request->input("email");
         $password = $request->input("password");
         $password_check = $request->input("password_check");
-        if(Auth::attempt(['email' => $input['email']])){
+        $results = DB::select('select * from users where email = :email', ['email' => $email]);
+        if(count($results)>0){
             return back()->withInput()->withErrors(['fail'=>'帳號已經被註冊']);
         }
         if($password!=$password_check){
